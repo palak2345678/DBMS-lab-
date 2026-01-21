@@ -1,0 +1,30 @@
+1. create a table st_info with attributes prn, name, m1, m2, m3
+   create table st_info(prn int, name varchar2(20), m1 number, m2 number, m3 number);
+output: table created
+
+select * from tab; 
+#this will display no of tables present in the database
+
+select * from st_info;
+#this will display content in the table
+
+desc st_info;
+#this will display the structure of the table 
+
+2. insert at least 10 rows in the table
+insert into st_info (prn, name, m1, m2, m3) values (101, 'raj', 4,5,0);
+insert into st_info (prn, name, m1, m2, m3) values (101, 'raju', 43,53,0);
+insert into st_info (prn, name, m1, m2, m3) values (101, 'rajesh', 42,51,0);
+insert into st_info (prn, name, m1, m2, m3) values (101, 'rajan', 44,51,0);
+insert into st_info (prn, name, m1, m2, m3) values (101, 'raju1', 46,54,0);
+insert into st_info (prn, name, m1, m2, m3) values (101, 'rajendra', 46,53,0);
+
+set linesize 150
+
+3. Add attribute total and perc to the table
+alter table st_info add total number;
+alter table  st_info add perc number;
+
+4. calculate total and perc 
+update st_info set total=m1+m2+m3;
+update st_info set perc=total/3;
