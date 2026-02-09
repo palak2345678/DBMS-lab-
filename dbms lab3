@@ -1,0 +1,24 @@
+to display istructors from computer science department
+select * from instructor where dept_id=(select dept_id from department where name= 'Computer Science');
+USING JOIN
+  
+select i.instructor_id, i.Name, i.salary, d.name from instructor i join department d on i.dept_id=d.dept_id where d.name= Computer Science'; 
+select d.name, avg(i.salary) as AVG_SAL from instructor i join department d on i.dept_id=d. dept_id where d. name= Computer Science' group by d. name; 
+select d. name, avg(i. salary) as AVG_SAL from department d join instructor i on d.dept_id=i.dept_id group by d. name;
+
+What is the total salary of all teachers earning more than 30K?
+select sum(salary) as total_sal from instructor where salary > 30000;
+
+SELECT C. course_id, C.title, COUNT(E.student_id) AS enrolled_students FROM COURSE C LEFT JOIN SECTIONS ON C.course_id = S. course_id LEFT JOIN
+ENROLLMENT E ON S.section_id = E.section_id GROUP BY C.course_id, C.title ORDER BY C.course_id;
+
+select * from department where name=' Computer Science';
+select * from department where lower (name) like 'computer science';
+select * from department where lower (name) like '%science%';
+select * from department where lower (name) like %sci%';
+  
+to calculate length of names of students
+select length (name) from student;
+
+to calculate total no of instructors 
+select count (name) from instructor;
